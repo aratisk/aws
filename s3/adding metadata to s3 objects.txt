@@ -1,0 +1,12 @@
+Objective: Identify the AWS CLI command(s) required to add, as system-defined metadata, the HTTP header Content-Disposition: attachment to each object in a subdirectory of PDFs within an S3 bucket.
+=====================================================
+
+https://stackoverflow.com/questions/2613792/change-content-disposition-of-existing-s3-object
+
+The aws cli command cp has an optional argument --content-disposition that makes this possible. --content-dispostion can either be set as attachment or inline.
+
+aws s3 cp <src> <dest> --content-disposition attachment
+This works for setting the metadata when it is uploaded, but if you later copy this file to a different path in s3, the metadata will not persist. To allow it to persist, you need to explicitly set this at upload time with the --metadata-directive REPLACE argument. The final command I use is:
+
+aws s3 cp <src> <dest> --metadata-directive REPLACE --content-disposition attachment
+aws s3 cp documentation: https://docs.aws.amazon.com/cli/latest/reference/s3/cp.html

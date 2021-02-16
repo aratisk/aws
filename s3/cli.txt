@@ -1,2 +1,39 @@
 this command lists details about objects in an S3 bucket. Documentation: https://docs.aws.amazon.com/cli/latest/reference/s3api/list-objects-v2.html.
 aws s3api list-objects-v2 --bucket <myBucketName> (edited) 
+=========
+
+To se the meta data for files already uploaded :(to test
+aws s3 ls s3://mybucket/brand_img/ios/|awk {'print $4'} > objects.txt
+
+ while read line; do aws s3api copy-object --bucket mybucket  \
+--copy-source /mybucket/brand_img/ios/$line --key brand_img/ios/$line \
+--metadata-directive REPLACE --metadata Content-Disposition=$line --acl public-read; done < objects.txt
+
+====
+
+simple commands to copy
+aws s3 cp myDir s3://mybucket/ --recursive --exclude "*.jpg"
+
+to copy between buckets:
+aws s3 cp s3://mybucket/logs/ s3://mybucket2/logs/ --recursive --exclude "*" --include "*.log"
+
+use sync to upload only updated files: 3
+
+If you wish to synchronize the current directory to an Amazon S3 bucket, use:
+
+aws s3 sync . s3://[bucket name]
+Or to sync to a directory within the S3 bucket:
+
+aws s3 sync . s3://[bucket name]/[path]
+===
+
+to list:aws s3 ls s3://arati-tutor-intro/test-folder/
+
+setting metadata:aws s3 cp . s3://numberfit-website/numbertots/activity-book-PDFs/ --content-disposition attachment
+
+== to try : createbucket?
+
+You need to add double quotes around your source pattern: aws s3 cp "*.CSV" s3://openprescribing
+
+Then it should work. It happened to me before.
+https://stackoverflow.com/questions/56010647/automatically-retrieve-an-object-url-link-in-s3-public-bucket

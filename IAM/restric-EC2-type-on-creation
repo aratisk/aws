@@ -1,0 +1,25 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "limitedSize",
+            "Effect": "Deny",
+            "Action": "ec2:*",
+            "Resource": "*",
+            "Condition": {
+                "ForAnyValue:StringNotLike": {
+                    "ec2:InstanceType": [
+                        "t3.*",
+                        "*.medium"
+                    ]
+                }
+            }
+        }
+    ]
+}
+
+different instance types: https://aws.amazon.com/ec2/instance-types/
+
+references: 
+
+https://wellarchitectedlabs.com/cost/200_labs/200_2_cost_and_usage_governance/3_ec2_restrict_family/ (allow example - didnt work for me)

@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "restrict-s3-bucket",
+            "Effect": "Deny",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::Test-s3-bucket",
+               etc...
+        },
+        {
+            "Sid": "restrict-dynamodb",
+            "Effect": "Deny",
+            "Action": "dynamodb:*",
+            "Resource": [
+                "arn:aws:dynamodb:eu-west-2:2312312:table/users",
+               etc
+            ]
+        }
+    ]
+}

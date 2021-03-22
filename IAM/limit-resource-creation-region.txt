@@ -17,3 +17,8 @@
     ]
 }
 comments ---tested and works
+reference: https://serverfault.com/questions/589150/is-it-possible-to-restrict-aws-users-accounts-to-a-specific-region
+https://medium.com/swlh/how-to-restrict-users-to-access-aws-services-in-a-specific-region-aws-articles-aaabd8b01f1b
+list of regions: https://docs.aws.amazon.com/general/latest/gr/rande.html
+
+to find all the regions for an accocunt: aws ec2 describe-regions --all-regions

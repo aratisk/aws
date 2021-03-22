@@ -29,7 +29,7 @@ aws s3 sync . s3://[bucket name]/[path]
 
 to list:aws s3 ls s3://arati-tutor-intro/test-folder/
 
-setting metadata:aws s3 cp . s3://numberfit-website/numbertots/activity-book-PDFs/ --content-disposition attachment
+setting metadata:aws s3 cp . s3://numberfit-website/numbertots/activity-book-PDFs/ --recursive --content-disposition attachment
 
 == to try : createbucket?
 

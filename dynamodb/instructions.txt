@@ -1,0 +1,20 @@
+refer to documents here: https://www.dynamodbguide.com/environment-setup
+
+Movie example example here: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.JavaScript.html
+
+to add cognito db replace the direct access key/pass:
+
+AWS.config.update({
+  region: "eu-west-2",
+  accessKeyId: "your-key-id",
+  secretAccessKey: "your-access-key"
+});
+
+with this:
+
+AWS.config = {
+    region: "eu-west-2",
+    credentials: new AWS.CognitoIdentityCredentials({
+            IdentityPoolId : 'your-identity-pool-id',
+          }),
+};

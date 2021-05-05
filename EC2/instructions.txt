@@ -5,8 +5,12 @@ resize volume(ie extend existing volume) : https://www.youtube.com/watch?v=1Brbq
 df -h
 
 sudo file -s /dev/xvd* --> normally ext4 type
+use sudo resize2fs /dev/xvd01
+gives error : The filesystem is already 2096891 (4k) blocks long.  Nothing to do!
+however reboot the server and shows correct space on df -h
+
 or do cat /etc/fstab if xfs then do growpart /dev/xvda 1 and then do xfs_growfs -d / now id u do df -h then correctly show space added
-sudo resize2fs /dev/xvd01
+
 
 login using public ip adddress in putty, then import key under auth , login using username ec2_user.
 fdisk -l
@@ -31,3 +35,5 @@ now mkdir /tmp/disk2 then mount /dev/xvdf /tmp/disk2
 now lsblk will show the mount point and also df -h will show too . you lose a bit of space to the partition and formatting.
 
 is this required? Also one more point has to be noted that after you restart your instance we need to remount the partition. To make it permanent we need to make an enter in /etc/fstab.
+
+additional reads but no partitinmentioned: https://devopscube.com/mount-ebs-volume-ec2-instance/

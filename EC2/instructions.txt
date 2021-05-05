@@ -29,3 +29,5 @@ now lsblk will show the partition. next do format
 format: mkfs -t ext4 /dev/xvdf lsblk now will not show the partition anymore as its been formatted.
 now mkdir /tmp/disk2 then mount /dev/xvdf /tmp/disk2
 now lsblk will show the mount point and also df -h will show too . you lose a bit of space to the partition and formatting.
+
+is this required? Also one more point has to be noted that after you restart your instance we need to remount the partition. To make it permanent we need to make an enter in /etc/fstab.

@@ -1,0 +1,31 @@
+to extend size:
+
+resize volume(ie extend existing volume) : https://www.youtube.com/watch?v=1Brbqkzqvjw 
+
+df -h
+
+sudo file -s /dev/xvd* --> normally ext4 type
+or do cat /etc/fstab if xfs then do growpart /dev/xvda 1 and then do xfs_growfs -d / now id u do df -h then correctly show space added
+sudo resize2fs /dev/xvd01
+
+login using public ip adddress in putty, then import key under auth , login using username ec2_user.
+fdisk -l
+
+/dev/sda1 is normally the root volume
+
+
+to mount new disk 
+
+Attach a new volume : https://www.youtube.com/watch?v=kp-8g0YF0Hw
+
+
+login , lsblk, create volume but make sure its created in same region as EC2 instance. check state shows available(changes to in-use when attached to an EC2 instance), then attach to the ecs instance.
+i think its sdf for windows and xvdf (f,g etc) for linux
+if you do df -h the disk will not show as its a raw disk and not partitioned and then format and then finally mount on the directory
+basically lsblk shows the disks but the df -h shows only whe mounted.
+find the disk name from lsblk and then use fdisk /dev/xvdf command to partition 
+fdisk options: n - partition, p - primary , partition number (1-4): , first sector : 1048 and last sector :41943039(if only 1 partitio), finally w to do the aprtition
+now lsblk will show the partition. next do format
+format: mkfs -t ext4 /dev/xvdf lsblk now will not show the partition anymore as its been formatted.
+now mkdir /tmp/disk2 then mount /dev/xvdf /tmp/disk2
+now lsblk will show the mount point and also df -h will show too . you lose a bit of space to the partition and formatting.

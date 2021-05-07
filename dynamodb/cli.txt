@@ -1,0 +1,36 @@
+to add data to the tables from json:
+
+
+aws dynamodb batch-write-item --request-items file://./teams.json
+
+SCAN
+aws dynamodb scan--return-consumed-capacity "TOTAL" --table-name baseballstats --> this is 0.5 unit 
+aws dynamodb scan--return-consumed-capacity "TOTAL" --consistent-read --table-name baseballstats --> this is 1 unit(more expensive)
+filtering items to return items taht have teamid seattle: aws dynamodb scan--return-consumed-capacity "TOTAL" --consistent-read --table-name baseballstats 
+--filter-expression 'TeamID = :t' --expression-attribute-values='{":t":{"S":"TEAMINFO_SEA"}}'
+scan count: 23 (not efficient) 
+
+Query:
+whereas scan flips thorugh the data so not efficient, query retrieves based on the PK,index etc
+aws dynamodb query --table-name baseballstats 
+--key-condition-expression "TeamID = :t"
+--expression-attribute-values='{":t":{"S":"GAMES_LAA"}}' 
+--return-consumed-capacity "TOTAL" 
+scan count: 6
+
+adding sort key as well:
+aws dynamodb query --table-name baseballstats 
+--key-condition-expression "TeamID = :t AND SK BETWEEN :d1 AND :d2"
+--expression-attributes-values='{":t":{"S":"GAMES_LAA"},":d1":{"S":"20190401"},":d2":{"S":"20190417"}}' 
+--return-consumed-capacity "TOTAL"  
+scan count: 3
+
+Now add a filter to that query:
+aws dynamodb query --table-name baseballstats 
+--key-condition-expression "TeamID=:t AND SK BETWEEN :d1 AND :d2"
+--expression-attributes-values='{":t":{"S":"GAMES_LAA"},":d1":{"S":"20190401"},":d2":{"S":"20190417"},":r":{"N":"5"}}' 
+--return-consumed-capacity "TOTAL"  
+--filter-expression "Runs >= :r"
+scan count: 3
+
+write down the datatypes from screenshot

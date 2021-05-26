@@ -1,0 +1,33 @@
+setup using the instructions here: https://app.pluralsight.com/guides/building-a-serverless-web-app-on-aws-services (Also saved under d:aws/lambda
+
+on windows: check node -v & npm -v. then install serverless by running npm install serverless -g. then serverless -v to 
+then install aws cli and check uing aws --version and then do aws configure
+
+waht is serverless framework? The general term for any framework that focusses on functions as a service. the specific serverless framework that we will be using is serverless.com
+others include spep, sparta , zappa , gordon, apex
+
+serverless.com supports aws, azure, gc, open whisk and languages: java, js(nodejs),python,php,c#
+
+https://www.npmjs.com/package/serverless
+
+https://www.youtube.com/watch?v=EeLPE_3xals --> using CLI
+to watch
+
+
+https://www.fernandomc.com/posts/eight-examples-of-fetching-data-from-dynamodb-with-node/
+taken from above link:
+code: 
+// Load the AWS SDK for JS
+var AWS = require("aws-sdk");
+
+// Set a region to interact with (make sure it's the same as the region of your table)
+AWS.config.update({region: 'us-east-1'});
+
+// Set a table name that we can use later on
+const tableName = "basicSongsTable"
+
+// Create the Service interface for DynamoDB
+var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
+
+// Create the Document Client interface for DynamoDB
+var ddbDocumentClient = new AWS.DynamoDB.DocumentClient();

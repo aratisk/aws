@@ -1,0 +1,16 @@
+setup a api name first eg: worldcup
+setup the resource name eg: you need a role to connect to the aws service.
+create a policy with query& scan access to dynamo db. the create a role 
+create role, select apigateway as the service. set policy above
+
+add cloudwatch to the role?? (just need logs:CreateLogGroup, logs:CreateLogStream, logs:PutLogEvents)
+https://www.youtube.com/watch?v=fHcslTrkMz4
+https://aws.amazon.com/blogs/compute/using-amazon-api-gateway-as-a-proxy-for-dynamodb/
+
+Once tested. then deploy and invoke the url from browser to get results back
+
+now for talking to lambda :
+
+create a policy for scan and query access to dynamodb (use same as above )
+check get-all-authors-lambda-role for a sample role
+The apito lambda permissions are amnaged internally when you integrate the lambda 

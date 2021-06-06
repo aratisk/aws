@@ -1,1 +1,9 @@
 setup instructions
+
+user pools and identity pools
+
+create a user pool first --> create app client --> integration settings -> then you can login and create a user
+
+how to create an authenticated cognito pool and connect to api gateway : https://www.youtube.com/watch?v=oFSU6rhFETk
+
+https://www.youtube.com/watch?v=ZRJbosMAWU4

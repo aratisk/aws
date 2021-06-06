@@ -1,0 +1,2 @@
+see this file for the different role categories and the related policies that aws offers 
+https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html#jf_network-administrator

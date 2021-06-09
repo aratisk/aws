@@ -31,3 +31,6 @@ var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10'});
 
 // Create the Document Client interface for DynamoDB
 var ddbDocumentClient = new AWS.DynamoDB.DocumentClient();
+
+=== how lambda promises differ from normal code executions ==
+https://stackoverflow.com/questions/59420115/dynamodb-record-not-added-through-map-loop

@@ -14,3 +14,5 @@ now for talking to lambda :
 create a policy for scan and query access to dynamodb (use same as above )
 check get-all-authors-lambda-role for a sample role
 The apito lambda permissions are amnaged internally when you integrate the lambda 
+
+https://medium.com/devtechblogs/https-medium-com-lior-k-sh-controlling-aws-api-gateway-request-parameters-lambda-function-49b08f96ccd9

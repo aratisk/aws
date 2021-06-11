@@ -34,3 +34,10 @@ var ddbDocumentClient = new AWS.DynamoDB.DocumentClient();
 
 === how lambda promises differ from normal code executions ==
 https://stackoverflow.com/questions/59420115/dynamodb-record-not-added-through-map-loop
+
+===
+https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-create-api-as-simple-proxy-for-lambda.html
+appending the filterexpression eg: https://stackoverflow.com/questions/54805237/aws-lambda-nodejs-scan-with-optional-filter-attributes
+returning lambda to api
+https://levelup.gitconnected.com/implementing-a-rest-api-with-aws-api-gateway-lambda-and-dynamodb-c62b8a1f6182
+scanning for more data af more than 1MB: https://stackoverflow.com/questions/65178797/is-it-possible-to-query-json-data-from-amazon-dynamodb-using-javascript-sdk

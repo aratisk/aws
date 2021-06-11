@@ -1,0 +1,9 @@
+Query and scan:
+https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/dynamodb-example-query-scan.html
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GettingStarted.NodeJs.04.html
+https://www.alexdebrie.com/posts/dynamodb-filter-expressions/
+
+nodejs code: https://www.codegrepper.com/code-examples/javascript/js+fetching+data+from+aws
+
+setting up nodejs:
+https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-nodejs.html

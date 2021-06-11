@@ -1,0 +1,6 @@
+user@localhost:~$ ssh -v -i my_key.pem ec2-user@11.22.33.44
+
+requesting spot instance:
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-requests.html
+
+https://aws.amazon.com/premiumsupport/knowledge-center/ec2-linux-resolve-ssh-connection-errors/

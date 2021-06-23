@@ -1,0 +1,12 @@
+flexible workloads
+
+c6 16g large
+
+keypair
+
+explicitly opne ssh port , set security group.
+
+update the packages
+apt add repository handbrake
+sudo apt update
+sudo apt install-recommends handbrake cli

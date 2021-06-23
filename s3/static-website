@@ -1,2 +1,11 @@
 creating index.html: https://docs.aws.amazon.com/AmazonS3/latest/userguide/IndexDocumentSupport.html
 creating endpoint : https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteEndpoints.html
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteAccessPermissionsReqd.html
+
+though you cant restrict access to the website using policy but you cna restrict content download using the referrrer eg:
+https://stackoverflow.com/questions/63544950/how-to-limit-access-to-individual-files-in-an-amazon-s3-static-website
+https://stackoverflow.com/questions/45180560/how-to-set-bucket-policy-to-allow-access-for-a-particular-referrer
+https://stackoverflow.com/questions/5886048/amazon-s3-bucket-policy-restricting-access-by-referer-but-not-restricting-if-u
+https://stackoverflow.com/questions/64125629/amazon-s3-restrict-access-by-referer
+
+examine this one? https://docs.aws.amazon.com/AmazonS3/latest/userguide/example-bucket-policies-vpc-endpoint.html

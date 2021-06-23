@@ -7,3 +7,8 @@ create a user pool first --> create app client --> integration settings -> then 
 how to create an authenticated cognito pool and connect to api gateway : https://www.youtube.com/watch?v=oFSU6rhFETk
 
 https://www.youtube.com/watch?v=ZRJbosMAWU4
+
+is this useful?? https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-configuring-app-integration.html
+
+issues and resolutions:
+https://stackoverflow.com/questions/44043289/aws-invalid-identity-pool-configuration-check-assigned-iam-roles-for-this-poo

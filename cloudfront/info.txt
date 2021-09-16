@@ -1,0 +1,1 @@
+how to restrict cloudfrom to my domain only. eg if you have a mp4 file in s3 how can we restrict access using c;oudfront so that it can only be accessed from numfit.com

@@ -7,3 +7,6 @@ nodejs code: https://www.codegrepper.com/code-examples/javascript/js+fetching+da
 
 setting up nodejs:
 https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-started-nodejs.html
+
+-----
+The KeyConditionExpression works only with the key in from the index primary key and sort key.

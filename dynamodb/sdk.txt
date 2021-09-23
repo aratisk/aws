@@ -10,3 +10,13 @@ https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/getting-starte
 
 -----
 The KeyConditionExpression works only with the key in from the index primary key and sort key.
+--
+Remember that partitionKeyName only support equality. sortKeyName support multiple different operation
+--
+There are 2 different ways to interact with dynamoDb, you can either use: AWS.DynamoDB (to perform some custom type wrapping, eg wrap numbers as strings) or AWS.DynamoDB.DocumentClient which does the type wrapping for you - the latter is more simple to use for most cases.
+-
+
+DynamoDB has a 1MB limit on the amount of data it will retrieve in a single request. Scans will often hit this 1MB limit if you're using your table for real use cases, which means you'll need to paginate through results.If you hit the 1MB limit with a Scan, it will return a "NextToken" key in the response. You can use the value given with the --starting-token option to continue scanning from the location you previously ended.You can test this behavior by passing a --max-items limit in our table. Let's make a Scan request with a max items limit of 1
+
+
+Filter expressions may not be used on primary key elements in a Query operation. This makes sense as you can just use the Key Expression if you want to apply an expression on the primary key elements. This limitation does not apply to Scan operations -- you may use filter expressions on primary keys with a Scan.

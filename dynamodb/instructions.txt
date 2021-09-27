@@ -25,3 +25,6 @@ design considerations
 how many tables do you need? mostly only i
 Identify Access patterns. then identify the primary key and indexes to minimise the no of requests to satisfy each access pattern.
 mostly one table for company,projects,employees etc
+
+
+cost: https://blog.yugabyte.com/dynamodb-pricing-calculator-expensive-vs-alternatives/

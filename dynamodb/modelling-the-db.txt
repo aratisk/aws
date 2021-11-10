@@ -1,0 +1,18 @@
+For efficiency I would propose totally different design. With NoSQL databases (and DynamoDB is not different) we always need to consider the access patterns first. Also, if possible we should strive to fit all our data within same table and several indexes. From what we have from OP and his comments, these are the two access patterns:
+
+For a company X, get complete invoice Y (including all items or range of items) [based on this comment ]
+Get all invoices for company X [ based on this comment ]
+We now wonder what is a good Primary Key? Translates to question what is a good Partition Key (PK) and what is a good Sort Key (SK) and which secondary indexes do we need to create and of what kind (local or global)? Some reminders:
+
+Primary Key can be on one column or composite
+Composite primary key consists of Partition Key and Sort Key
+Partition key is used as input to the hashing function that will determine partition of the items
+Sort key can also be composite, which allows us to model one-to-many relationships in DynamoDB as given in one of the comments links: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-sort-keys.html
+When creating query on the table or index, you always need to use '=' operator on the Partition Key
+When querying ranges on Sort Key you have option for KeyConditionExpression which provides you with set of operators for sorting and everything in between (one of them being function begins_with (a, substr) )
+You are also allowed to use FilterExpression if you need to further refine the Query results (filter on the projected attributes)
+Local Secondary Indexes (LSI) have same Partition Key but different Sort Key than your original table and give you different view of your data, organized according to an alternative Sort Key
+Global Secondary Indexes (GSI) have different Partition Key and different Sort Key than your original table and give you completely different view on data
+All items with the same partition key are stored together, and for composite Primary keys, are ordered by the sort key value. DynamoDB splits partitions by sort key if the collection size grows bigger than 10 GB.
+
+read more here: https://stackoverflow.com/questions/32620215/3-fields-composite-primary-key-unique-item-in-dynamodb

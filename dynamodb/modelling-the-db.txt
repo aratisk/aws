@@ -16,3 +16,6 @@ Global Secondary Indexes (GSI) have different Partition Key and different Sort K
 All items with the same partition key are stored together, and for composite Primary keys, are ordered by the sort key value. DynamoDB splits partitions by sort key if the collection size grows bigger than 10 GB.
 
 read more here: https://stackoverflow.com/questions/32620215/3-fields-composite-primary-key-unique-item-in-dynamodb
+
+===
+chooosing the right primary key: https://aws.amazon.com/blogs/database/choosing-the-right-dynamodb-partition-key/

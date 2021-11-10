@@ -1,0 +1,6 @@
+composite indexes?
+https://stackoverflow.com/questions/32620215/3-fields-composite-primary-key-unique-item-in-dynamodb
+
+
+how to query from multiple indexes:
+https://stackoverflow.com/questions/56051481/how-to-query-aws-dynamodb-using-multiple-indexes

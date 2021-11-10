@@ -1,1 +1,17 @@
 https://www.dynamodbguide.com/what-is-dynamo-db
+
+queries: 
+https://www.bmc.com/blogs/dynamodb-advanced-queries/
+https://www.bmc.com/blogs/dynamodb-queries/
+  
+  youtube:
+  https://www.youtube.com/playlist?list=PLvmxnsCyoh65lBHmg9TTPJg3nK4l50oxv
+  
+  using sort keys to organise data:
+  https://aws.amazon.com/blogs/database/using-sort-keys-to-organize-data-in-amazon-dynamodb/
+  
+  can i use contains in query?
+  https://stackoverflow.com/questions/43793888/how-to-make-search-using-contains-with-dynamodb
+  
+  can i querystring that has special characters using contains ?
+  https://stackoverflow.com/questions/66432350/aws-dynamodb-query-attribute-value-that-contains-special-character

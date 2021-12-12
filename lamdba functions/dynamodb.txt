@@ -1,0 +1,16 @@
+multiple filter expression in dynamo db 
+scan
+https://stackoverflow.com/questions/43055026/multiple-filterexpression-in-dynamodb-scan
+query
+https://stackoverflow.com/questions/46616282/dynamodb-query-filterexpression-multiple-condition-chaining-python
+to setup dynamic query
+https://stackoverflow.com/questions/64912065/aws-how-to-set-lambda-function-to-make-dynamic-query-to-dynamodb
+https://stackoverflow.com/questions/64912065/aws-how-to-set-lambda-function-to-make-dynamic-query-to-dynamodb
+https://stackoverflow.com/questions/55825544/how-to-dynamically-update-an-attribute-in-a-dynamodb-item
+https://stackoverflow.com/questions/67350181/dynamodb-dynamic-function-to-retrive-data
+DynamoDB FilterExpression with multiple condition javascript
+https://stackoverflow.com/questions/45211946/dynamodb-filterexpression-with-multiple-condition-javascript
+pagination:
+https://stackoverflow.com/questions/42765437/pagination-in-dynamodb-using-node-js
+How to use “IN” statement in FilterExpression using array - dynamodb:
+https://stackoverflow.com/questions/40283653/how-to-use-in-statement-in-filterexpression-using-array-dynamodb

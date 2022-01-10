@@ -18,3 +18,10 @@ The apito lambda permissions are amnaged internally when you integrate the lambd
 https://medium.com/devtechblogs/https-medium-com-lior-k-sh-controlling-aws-api-gateway-request-parameters-lambda-function-49b08f96ccd9
 
 https://aws.amazon.com/blogs/compute/support-for-multi-value-parameters-in-amazon-api-gateway/
+
+
+unchecked links:
+https://stackoverflow.com/questions/38189096/defining-optional-attribute-in-aws-api-gateway-dynamodb-mapping?rq=1
+https://stackoverflow.com/questions/60885939/how-to-allow-optional-key-in-api-gateway-mapping-template?rq=1
+https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-create-api-step-by-step.html
+https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-override-request-response-parameters.html

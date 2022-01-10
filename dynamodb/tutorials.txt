@@ -15,3 +15,20 @@ https://www.bmc.com/blogs/dynamodb-queries/
   
   can i querystring that has special characters using contains ?
   https://stackoverflow.com/questions/66432350/aws-dynamodb-query-attribute-value-that-contains-special-character
+
+
+unchecked links:
+How to Filter Nested Array Object in DynamoDB:
+https://stackoverflow.com/questions/47294056/how-to-filter-nested-array-object-in-dynamodb
+
+https://stackoverflow.com/questions/33847477/querying-a-global-secondary-index-in-dynamodb-local
+
+https://aws.amazon.com/blogs/database/querying-on-multiple-attributes-in-amazon-dynamodb/
+
+AWS Lambda NodeJS: Scan with optional filter attributes:
+https://stackoverflow.com/questions/54805237/aws-lambda-nodejs-scan-with-optional-filter-attributes
+
+https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_Query.html
+
+When to use (and when not to use) DynamoDB Filter Expressions:
+https://www.alexdebrie.com/posts/dynamodb-filter-expressions/

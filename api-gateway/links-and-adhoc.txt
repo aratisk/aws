@@ -1,2 +1,4 @@
 How do I configure my API Gateway REST API to pass query string parameters to a backend Lambda function or HTTP endpoint?
 https://aws.amazon.com/premiumsupport/knowledge-center/pass-api-gateway-rest-api-parameters/
+
+https://auth0.com/docs/customize/integrations/aws/aws-api-gateway-delegation/aws-api-gateway-delegation-1
